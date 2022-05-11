@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AutoInput';
+  getSelect(name: string){
+    alert('Selected: ' + name);
+    // console.log("Selected:", name);
+  }
 }

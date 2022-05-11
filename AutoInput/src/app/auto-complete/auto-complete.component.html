@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div class="control" [ngClass]="{'is_loading':isloading}">
+      <input
+        type="text"
+        placeholder="Search for a title"
+        [formControl]="inputbox"
+      />
+    </div>
+
+    <div class="list" *ngIf="posts.length>0 && !isloading">
+        <div *ngFor="let post of posts" (click)="onClick(post.title)">{{post.title}}</div>
+    </div>
+  </div>
+  
